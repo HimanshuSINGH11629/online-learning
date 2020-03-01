@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Alata|Montserrat&display=swap');
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color:rgb(233, 18, 64);
+    color:#000;
+    font-family: 'Montserrat', sans-serif;
+}
+.both{
+    margin:7em auto 0;
+    background-color:#fff;
+    max-width:750px;
+    height:350px;
+    display:flex;
+    padding:2em;
+    border-radius:1em;
+}
+.signup,.login{
+    border-right:1px solid rgb(233, 18, 64);
+    padding:1em;
+    margin-top:1em;
+    width:370px;
+}
+.login{
+    border:none;
+    margin-left:2em;
+}
+h1{
+    text-align:center;
+    text-transform:uppercase;
+    color:rgb(233, 18, 64);
+    font-weight:bold;
+    margin-bottom:1em;
+}
+label{
+    color:rgb(233, 18, 64);
+    display:block;
+    margin-top:1em;
+    font-weight:bold;
+}
+input[type="text"],input[type="password"]{
+    display:block;
+    padding:.8em;
+    width:22em;
+}
+input[type="submit"]{
+    display:block;
+    margin-top:1.5em;
+    padding:.7em;
+    width:8em;
+    background-color:#032449;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px #032449d3;
+    border-radius:1em;
+}
+input[type="submit"]:hover{
+    background-color:#032449d3;
+}
