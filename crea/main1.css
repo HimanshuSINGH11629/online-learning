@@ -81,9 +81,14 @@ span{
     font-family: 'Montserrat', sans-serif;
     cursor:pointer;
 }
+
 .hero-bg p{
     margin:.4em auto 0 13em;
     font-size:.8rem;
+}
+#txtHint{
+    font-size:.8rem;
+    color:yellow;
 }
 .content{
     display:flex;
@@ -150,10 +155,15 @@ color:#fff;
     margin-top:7em;
 }
 .contact{
-    padding:3em;
+    padding:0 3em;
     /*background-color: yellow;*/
     width:20em;
     margin-left:30em;
+}
+.contact h1{
+    margin:.5em 0;
+    text-transform:uppercase;
+    letter-spacing: .1em;;
 }
 .contact input[type="email"],input[type="button"],textarea {
     display:block;
