@@ -172,11 +172,14 @@ color:#fff;
     margin-bottom:1.5em;
     border:1px solid #fff;
 }
-input[type="button"]{
+#btn1{
     width:30% !important;
     background-color: #fc5185;
     border:none;
     color:#fff;
+    padding:.7em;
+    margin-bottom:1.5em;
+    border:1px solid #fff;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
 }

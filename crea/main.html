@@ -50,8 +50,8 @@
         <div class="art">
             <img src="images/python.png" alt="JAVA" height="200" width="100%">
             <h1>Python for Beginner</h1>
-            <p>Getting start with python.</p>
-            <button id="python" onclick="fallbackco()">Proceed</button>
+            <p id="demo">Getting start with python.</p>
+            <button id="python" onclick="loadXMLDoc()">Proceed</button>
         </div>
         <div class="art">
             <img src="images/sql.jpg" alt="JAVA" height="200" width="100%">
@@ -87,9 +87,12 @@
         <div class="contact" id="contact">
            <!-- <input type="text" name="" id="" placeholder="Name">-->
            <h1>contact</h1>
-            <input type="email" name="" id="" placeholder="Email">
-            <textarea name="" id="" cols="5" rows="1" placeholder="Message"></textarea>
-            <input type="button" value="Send">
+           <form action="mail.php" method="POST">
+            <input type="email" name="emailfrom" id="" placeholder="Email">
+            <textarea name="text" id="" cols="5" rows="1" placeholder="Message"></textarea>
+            <button name="submit" id="btn1">Send</button>
+           </form>
+            
         </div>
     </footer>
     <script src="fallback/app.js"></script>
@@ -110,6 +113,26 @@
           xhttp.open("GET", "texthint.php?q="+str, true);
           xhttp.send();   
         }
+        </script>
+        <!--XML Parser for changing the content of the html-->
+        <script>
+            function loadXMLDoc() {
+              var xmlhttp;
+              if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+              } else {
+                // code for older browsers
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+              }
+              xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("demo").innerHTML =
+                  this.responseText;
+                }
+              };
+              xmlhttp.open("GET", "test.txt", true);
+              xmlhttp.send();
+            }
         </script>
 </body>
 </html>
